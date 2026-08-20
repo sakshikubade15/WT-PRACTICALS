@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Technology Lab</title>
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    .navbar {
+        background-color: #1a1a4d;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+    }
+
+    .logo-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-icon {
+        background-color: #3a3a7c;
+        padding: 10px 14px;
+        border-radius: 8px;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    .logo-text h1 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .logo-text p {
+        margin: 0;
+        font-size: 13px;
+        color: #cfcfe8;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 14px;
+    }
+
+    .nav-links a.active {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .container {
+        background-color: white;
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 30px 40px;
+        border-radius: 5px;
+    }
+
+    h2.title {
+        margin-top: 0;
+    }
+
+    .intro-text {
+        color: #333;
+        line-height: 1.5;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 25px 0;
+    }
+
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    .col h3 {
+        color: #1a1a4d;
+    }
+
+    .col h4 {
+        color: #1a1a4d;
+        margin-bottom: 5px;
+    }
+
+    mark {
+        background-color: yellow;
+    }
+
+    .important {
+        color: red;
+        font-weight: bold;
+    }
+
+    .emphasis {
+        color: green;
+        font-style: italic;
+    }
+
+    .col img {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .fav-box {
+        background-color: #f1eefc;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 20px 25px;
+        margin-top: 30px;
+    }
+
+    .fav-box h4 {
+        margin-top: 0;
+        color: #1a1a4d;
+    }
+
+    .fav-box a {
+        color: #2a2ad1;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .footer {
+        background-color: #1a1a4d;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo-box">
+            <div class="logo-icon">&lt;/&gt;</div>
+            <div class="logo-text">
+                <h1>Web Technology Lab</h1>
+                <p>Learn &bull; Practice &bull; Build</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h2 class="title">Welcome to Web Technology Lab</h2>
+        <p class="intro-text">
+            This is a paragraph. HTML is used to create web pages.
+            It is easy to learn and widely used in web development.
+        </p>
+
+        <hr>
+
+        <div class="columns">
+
+            <div class="col">
+                <h3>Text Formatting</h3>
+                <p>This is <b>bold text.</b></p>
+                <p><i>This is italic text.</i></p>
+                <p>This is <u>underlined text.</u></p>
+                <p>This is <mark>highlighted text.</mark></p>
+                <p>H<sub>2</sub>O (Subscript)</p>
+                <p>(a+b)<sup>2</sup> (Superscript)</p>
+                <p class="important">This is important text.</p>
+                <p class="emphasis">This is emphasized text.</p>
+            </div>
+
+            <div class="col">
+                <h3>Lists in HTML</h3>
+                <h4>Ordered List</h4>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ol>
+
+                <h4>Unordered List</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Sample Image</h3>
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500" alt="mountain lake">
+            </div>
+
+        </div>
+
+        <div class="fav-box">
+            <h4>My Favorite Website</h4>
+            <p>Click the link below to visit Google:</p>
+            <a href="https://www.google.com" target="_blank">Visit Google &#8599;</a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Web Technology Lab | All Rights Reserved
+    </div>
+
+</body>
+</html>
