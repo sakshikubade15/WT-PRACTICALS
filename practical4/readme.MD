@@ -46,7 +46,7 @@ The final output of Practical 4 is shown below.
 
 ![Personal Blog Output](./output1.png)
 
-![Personal Blog Output](./output.png)
+![Personal Blog Output](./output2.png)
 
 ## Result
 
