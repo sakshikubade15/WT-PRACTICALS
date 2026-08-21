@@ -1,50 +1,249 @@
-body {
+* {
     margin: 0;
-    font-family: Arial;
-    background-color: #e8f5e9;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .header {
-    background-color: #a5d6a7;
-    color: #1b5e20;
-    text-align: center;
-    padding: 20px;
-    border: 2px solid #66bb6a;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 18px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .nav {
-    background-color: #c8e6c9;
-    text-align: center;
-    padding: 15px;
-    margin: 5px;
-    border: 2px solid #81c784;
-}
-
-.main {
     display: flex;
-    margin: 15px;
+    gap: 25px;
 }
 
-.sidebar {
-    width: 25%;
-    background-color: #f1f8e9;
-    padding: 20px;
-    border: 2px solid #81c784;
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
 }
 
-.content {
-    width: 75%;
-    background-color: white;
-    padding: 20px;
-    margin-left: 10px;
-    border: 2px solid #81c784;
+.nav-link:hover {
+    color: #000;
 }
 
-.footer {
-    background-color: #a5d6a7;
-    color: #1b5e20;
+.hero {
+    background-color: #e8e8e8;
+    padding: 80px 20px;
     text-align: center;
-    padding: 10px;
-    margin-top: 10px;
-    border: 2px solid #66bb6a;
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.hero-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.main-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.featured {
+    padding: 35px;
+}
+
+.card-content {
+    width: 100%;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.post-excerpt {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #eee;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #555;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.post-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+.back-arrow {
+    margin-right: 5px;
+}
+
+.post-article {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.post-header {
+    margin-bottom: 30px;
+}
+
+.post-header .post-title {
+    font-size: 38px;
+}
+
+.post-content {
+    line-height: 1.8;
+    color: #555;
+    font-size: 17px;
+}
+
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-article {
+        padding: 25px;
+    }
+
+    .post-header .post-title {
+        font-size: 30px;
+    }
 }

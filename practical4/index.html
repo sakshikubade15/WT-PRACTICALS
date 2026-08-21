@@ -1,62 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Web Technology</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>Web Technology Laboratory</h1>
-        <p>Learn HTML and CSS</p>
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo-section">
+                <a href="#" class="logo-link" onclick="showHome(event)">
+                    <div class="logo-icon">B</div>
+                    <span class="logo-text">Blog</span>
+                </a>
+            </div>
+
+            <nav class="nav">
+                <a href="#" class="nav-link" onclick="showHome(event)">Home</a>
+                <a href="#" class="nav-link">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <div id="home-page" class="page active">
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Stories Worth Reading</h1>
+
+                <p class="hero-description">
+                    A personal blog about writing, creativity, productivity,
+                    and the art of living intentionally in a digital world.
+                </p>
+            </div>
+        </section>
+
+        <main class="main-content">
+
+            <section class="section">
+
+                <h2 class="section-title">Featured</h2>
+
+                <div class="featured-grid">
+
+                    <article class="blog-card featured"
+                        onclick="showPost('the-art-of-minimalist-writing')">
+
+                        <div class="card-content">
+
+                            <div class="post-meta">
+                                <span>Sarah Chen</span>
+                                <span>•</span>
+                                <time>March 15, 2024</time>
+                                <span>•</span>
+                                <span>5 min read</span>
+                            </div>
+
+                            <h2 class="post-title">
+                                The Art of Minimalist Writing
+                            </h2>
+
+                            <p class="post-excerpt">
+                                Discover how simplicity in writing can create
+                                more powerful and engaging content. Learn the
+                                principles that great writers use to craft
+                                clear, impactful prose.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Writing</span>
+                                <span class="tag">Productivity</span>
+                                <span class="tag">Minimalism</span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <section class="section">
+
+                <h2 class="section-title">Recent Posts</h2>
+
+                <div class="posts-grid">
+
+                    <article class="blog-card"
+                        onclick="showPost('building-digital-habits')">
+
+                        <div class="card-content">
+
+                            <div class="post-meta">
+                                <span>Mark Rodriguez</span>
+                                <span>•</span>
+                                <time>March 12, 2024</time>
+                                <span>•</span>
+                                <span>4 min read</span>
+                            </div>
+
+                            <h2 class="post-title">
+                                Building Digital Habits That Stick
+                            </h2>
+
+                            <p class="post-excerpt">
+                                Creating lasting change in our digital lives
+                                requires more than willpower. Explore the
+                                psychology behind habit formation and practical
+                                strategies for digital wellness.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Productivity</span>
+                                <span class="tag">Digital Wellness</span>
+                                <span class="tag">Habits</span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="blog-card"
+                        onclick="showPost('creative-process-insights')">
+
+                        <div class="card-content">
+
+                            <div class="post-meta">
+                                <span>Emma Thompson</span>
+                                <span>•</span>
+                                <time>March 10, 2024</time>
+                                <span>•</span>
+                                <span>6 min read</span>
+                            </div>
+
+                            <h2 class="post-title">
+                                Insights from My Creative Process
+                            </h2>
+
+                            <p class="post-excerpt">
+                                A personal reflection on the messy, beautiful
+                                journey of creativity. From inspiration to
+                                execution, exploring what it really takes to
+                                bring ideas to life.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Creativity</span>
+                                <span class="tag">Process</span>
+                                <span class="tag">Personal</span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="blog-card"
+                        onclick="showPost('future-of-remote-work')">
+
+                        <div class="card-content">
+
+                            <div class="post-meta">
+                                <span>David Kim</span>
+                                <span>•</span>
+                                <time>March 8, 2024</time>
+                                <span>•</span>
+                                <span>7 min read</span>
+                            </div>
+
+                            <h2 class="post-title">
+                                The Future of Remote Work
+                            </h2>
+
+                            <p class="post-excerpt">
+                                As remote work becomes the norm, what can we
+                                expect from the future of distributed teams?
+                                Exploring trends, challenges, and opportunities
+                                ahead.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Remote Work</span>
+                                <span class="tag">Future</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Productivity</span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="blog-card"
+                        onclick="showPost('power-of-consistent-learning')">
+
+                        <div class="card-content">
+
+                            <div class="post-meta">
+                                <span>Lisa Zhang</span>
+                                <span>•</span>
+                                <time>March 5, 2024</time>
+                                <span>•</span>
+                                <span>5 min read</span>
+                            </div>
+
+                            <h2 class="post-title">
+                                The Power of Consistent Learning
+                            </h2>
+
+                            <p class="post-excerpt">
+                                In a rapidly changing world, the ability to
+                                learn continuously is our greatest asset.
+                                Discover strategies for building a sustainable
+                                learning practice.
+                            </p>
+
+                            <div class="tags">
+                                <span class="tag">Learning</span>
+                                <span class="tag">Personal Development</span>
+                                <span class="tag">Growth</span>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
     </div>
 
-    <div class="nav">
-        Home &nbsp; | &nbsp; About &nbsp; | &nbsp; Courses &nbsp; | &nbsp; Contact
-    </div>
+    <div id="post-page" class="page">
 
-    <div class="main">
+        <div class="post-container">
 
-        <div class="sidebar">
-            <h2>Quick Links</h2>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>Web Design</p>
+            <a href="#" class="back-link" onclick="showHome(event)">
+                <span class="back-arrow">←</span>
+                Back to Home
+            </a>
+
+            <article class="post-article">
+
+                <header class="post-header">
+
+                    <div id="post-meta" class="post-meta"></div>
+
+                    <h1 id="post-title" class="post-title"></h1>
+
+                    <p id="post-excerpt" class="post-excerpt"></p>
+
+                    <div id="post-tags" class="tags"></div>
+
+                </header>
+
+                <div id="post-content" class="post-content"></div>
+
+            </article>
+
         </div>
 
-        <div class="content">
-            <h2>Welcome to Web Technology</h2>
-
-            <p>
-                Web Technology is used to create and design websites.
-                It helps us to make webpages that are useful and attractive.
-            </p>
-
-            <h3>HTML</h3>
-            <p>
-                HTML is used to create the basic structure of a webpage.
-            </p>
-
-            <h3>CSS</h3>
-            <p>
-                CSS is used to add colors, fonts, spacing and design to a webpage.
-            </p>
-
-            <h3>Our Goal</h3>
-            <p>
-                Our goal is to learn how to create simple and beautiful
-                webpages using HTML and CSS.
-            </p>
-        </div>
-
     </div>
 
-    <div class="footer">
-        <p>© 2026 Web Technology Laboratory</p>
-        <p>Department of Computer Science and Engineering</p>
-    </div>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
